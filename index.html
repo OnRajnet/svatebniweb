@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svatba - Kateřina & Ondřej</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Vlastní styly pro písma */
+        body {
+            font-family: 'Montserrat', sans-serif; /* Moderní, čisté písmo pro text */
+        }
+        h1, h2, h3, .font-fancy {
+            font-family: 'Cormorant Garamond', serif; /* Elegantní, patkové písmo pro nadpisy */
+        }
+
+        .hero-bg {
+            /* Zde je odkaz na vaši fotku. Ujistěte se, že soubor 'dsc01713.jpeg' je nahrán ve stejné složce jako tento HTML soubor na vašem hostingu. */
+            background-image: url('dsc01713.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+
+        .full-width-bg {
+             background-image: url('https://placehold.co/1200x800/e7e5e4/57534e?text=Na%C5%A1e+Dal%C5%A1%C3%AD+Fotka');
+             background-size: cover;
+             background-position: center;
+             background-attachment: fixed; /* Parallax efekt */
+        }
+    </style>
+</head>
+<body class="bg-stone-100 text-stone-700">
+
+    <!-- Hlavička -->
+    <header id="uvod" class="bg-stone-100/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#uvod" class="font-fancy text-2xl tracking-widest text-stone-800">KATEŘINA & ONDŘEJ</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#pribeh" class="text-stone-600 hover:text-stone-800 transition">O NÁS</a>
+                <a href="#svatba" class="text-stone-600 hover:text-stone-800 transition">SVATBA</a>
+                <a href="#galerie" class="text-stone-600 hover:text-stone-800 transition">GALERIE</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Sekce -->
+    <section class="hero-bg flex items-center justify-center text-center text-white">
+        <div class="bg-black/40 p-10 rounded-sm">
+            <p class="tracking-widest">VÍTEJTE NA NAŠEM SVATEBNÍM WEBU</p>
+            <h1 class="font-fancy text-7xl md:text-9xl my-4">Kateřina & Ondřej</h1>
+        </div>
+    </section>
+
+    <!-- Odpočet -->
+    <section class="bg-stone-100 py-16 md:py-24">
+        <div class="container mx-auto text-center">
+            <h2 class="font-fancy text-4xl text-stone-800 tracking-wider mb-2">JIŽ BRZY TO SPOLU OSLAVÍME!</h2>
+            <p class="text-stone-600 mb-10">15. září 2025</p>
+            <div id="countdown" class="flex justify-center space-x-4 md:space-x-10 text-stone-800">
+                <div class="text-center">
+                    <p id="days" class="text-5xl md:text-7xl font-fancy">0</p>
+                    <p class="text-sm tracking-widest">Dny</p>
+                </div>
+                <div class="text-5xl md:text-7xl font-light opacity-50">:</div>
+                <div class="text-center">
+                    <p id="hours" class="text-5xl md:text-7xl font-fancy">0</p>
+                    <p class="text-sm tracking-widest">Hodiny</p>
+                </div>
+                <div class="text-5xl md:text-7xl font-light opacity-50">:</div>
+                <div class="text-center">
+                    <p id="minutes" class="text-5xl md:text-7xl font-fancy">0</p>
+                    <p class="text-sm tracking-widest">Minuty</p>
+                </div>
+                <div class="text-5xl md:text-7xl font-light opacity-50">:</div>
+                <div class="text-center">
+                    <p id="seconds" class="text-5xl md:text-7xl font-fancy">0</p>
+                    <p class="text-sm tracking-widest">Vteřiny</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rychlé Info -->
+    <section class="bg-stone-200 py-16">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center px-6">
+            <div class="flex flex-col items-center">
+                <svg class="h-10 w-10 text-stone-500 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                <h3 class="font-fancy text-2xl text-stone-800 mb-2">DATUM</h3>
+                <p class="text-stone-600">15. září 2025<br>Obřad od 12:00 hod</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <svg class="h-10 w-10 text-stone-500 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                <h3 class="font-fancy text-2xl text-stone-800 mb-2">LOKALITA</h3>
+                <p class="text-stone-600">Stodola Borohrádek<br>Královéhradecký kraj</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <svg class="h-10 w-10 text-stone-500 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                <h3 class="font-fancy text-2xl text-stone-800 mb-2">DRESS CODE</h3>
+                <p class="text-stone-600">Odstíny béžové<br>Elegantní styl</p>
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <a href="#svatba" class="px-8 py-3 text-sm border border-stone-600 text-stone-600 hover:bg-stone-600 hover:text-white font-semibold rounded-sm transition-colors">VÍCE INFO O SVATBĚ</a>
+        </div>
+    </section>
+
+    <!-- Náš příběh -->
+    <section id="pribeh" class="py-24 bg-stone-100">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-center gap-8 px-6">
+            <img src="https://placehold.co/300x400/dcd3c4/57534e?text=Kate%C5%99ina" alt="Fotka Kateřiny" class="rounded-sm shadow-lg w-full md:w-1/4">
+            <div class="text-center max-w-xl">
+                <h2 class="font-fancy text-4xl text-stone-800 mb-6">ZNÁTE NÁŠ PŘÍBĚH?</h2>
+                <p class="text-stone-600 leading-relaxed">
+                    Zde můžete napsat krátký příběh o tom, jak jste se seznámili, nebo nějakou milou vzpomínku. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo nec libero gravida, vel malesuada augue aliquam. Integer nec odio. Praesent libero.
+                </p>
+            </div>
+             <img src="https://placehold.co/300x400/dcd3c4/57534e?text=Ond%C5%99ej" alt="Fotka Ondřeje" class="rounded-sm shadow-lg w-full md:w-1/4">
+        </div>
+    </section>
+    
+    <!-- Detaily svatby -->
+    <section id="svatba" class="py-24 bg-stone-100">
+        <div class="container mx-auto text-center px-6">
+            <p class="tracking-widest text-stone-600">PRAKTICKÉ INFO</p>
+            <h2 class="font-fancy text-5xl text-stone-800 mb-12">O SVATBĚ</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
+                <div class="bg-stone-200 p-8 rounded-sm shadow-lg">
+                    <h3 class="font-fancy text-3xl text-stone-800 mb-4">Obřad</h3>
+                    <p class="mb-2"><strong class="text-stone-700">Příjezd hostů:</strong> 11:00</p>
+                    <p class="mb-2"><strong class="text-stone-700">Začátek obřadu:</strong> 12:00</p>
+                    <p class="mt-4 text-stone-500 text-sm">Po obřadu bude následovat společné focení, než se vrhneme na oslavy.</p>
+                </div>
+                <div class="bg-stone-200 p-8 rounded-sm shadow-lg">
+                    <h3 class="font-fancy text-3xl text-stone-800 mb-4">Hostina</h3>
+                    <p class="mb-2"><strong class="text-stone-700">Oběd:</strong> Po focení</p>
+                    <p class="mt-4 text-stone-600">Po obřadu bude následovat společný oběd. Odpoledne se můžete těšit na dort a večer bude připraven raut a grilování.</p>
+                </div>
+            </div>
+            <div id="mapa" class="mt-16">
+                 <h3 class="font-fancy text-3xl text-stone-800 mb-6">Místo konání: Stodola Borohrádek</h3>
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2553.869032733984!2d16.0760520769911!3d50.09636181755181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470ddb4fc8d70855%3A0x6786c639ae2150b!2sStodola%20Borohr%C3%A1dek!5e0!3m2!1sen!2scz!4v1719067201732!5m2!1sen!2scz"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    class="rounded-sm shadow-lg"></iframe>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Galerie -->
+    <section id="galerie" class="py-24 bg-stone-200">
+        <div class="container mx-auto text-center px-6">
+            <h2 class="font-fancy text-5xl text-stone-800 mb-12">Galerie</h2>
+            <p class="text-stone-600 max-w-2xl mx-auto mb-10">Zde najdete výběr našich společných fotek. Po svatbě sem přidáme i ty svatební!</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://placehold.co/400x500/dcd3c4/57534e?text=Foto+1" class="rounded-sm shadow-lg w-full h-full object-cover">
+                <img src="https://placehold.co/400x500/e7e5e4/57534e?text=Foto+2" class="rounded-sm shadow-lg w-full h-full object-cover">
+                <img src="https://placehold.co/400x500/dcd3c4/57534e?text=Foto+3" class="rounded-sm shadow-lg w-full h-full object-cover">
+                <img src="https://placehold.co/400x500/e7e5e4/57534e?text=Foto+4" class="rounded-sm shadow-lg w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Patička -->
+    <footer class="bg-stone-800 text-stone-300 py-8 text-center">
+        <p class="text-lg font-fancy tracking-widest">Budeme se na Vás těšit!</p>
+        <p class="mt-4 text-sm">© <span id="currentYear"></span> Kateřina Puczková & Ondřej Rajnet</p>
+    </footer>
+
+    <script>
+        // --- ODPOČET ---
+        // Nastavení cílového data
+        const countdownDate = new Date("Sep 15, 2025 12:00:00").getTime();
+
+        // Aktualizace každou vteřinu
+        const interval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            // Výpočty pro dny, hodiny, minuty, vteřiny
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Zobrazení výsledků v elementech
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+
+            // Po skončení odpočtu
+            if (distance < 0) {
+                clearInterval(interval);
+                document.getElementById("countdown").innerHTML = "<p class='text-4xl font-fancy'>Právě jsme si řekli své ANO!</p>";
+            }
+        }, 1000);
+
+        // --- ROK V PATIČCE ---
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // --- PLYNULÉ SKROLOVÁNÍ ---
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId.length > 1) { // Zkontroluje, zda href není jen "#"
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
